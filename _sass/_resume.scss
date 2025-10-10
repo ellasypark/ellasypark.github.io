@@ -74,9 +74,7 @@
   }
 }
 
-.gocenter {
-  text-align: center;
-}
+
 
 .icon-links {
   margin: 0;
@@ -85,7 +83,6 @@
   position: relative;
   top: 4px;
   text-align: center;
-  border-top: 2px solid #c7c7c7;
   padding-top: .4rem;
 
   @include media_larger_than_mobile {
