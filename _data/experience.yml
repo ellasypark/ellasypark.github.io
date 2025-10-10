@@ -1,0 +1,19 @@
+# Jobs
+# VP of Global Communications
+- company: Solutions Architect
+  position: Megazone(Seoul, Korea)
+  duration: Dec, 2024 &mdash; Present
+  summary: Leveraged <strong>Akamai CDN and WAF</strong> solutions to build secure and robust networks for enterprise clients including Samsung, Coupang, Hyundai, and LG	<ul class="resume-item-list"><li>Ensured seamless user experience during Coupang's iPhone 17 pre-order event by engineering CDN configurations that <strong>supported 250,000 concurrent users</strong> and <strong>26.32 Gbps peak traffic</strong> with more than 97% offload rate</li><li>Blocked over 200M malicious requests montly and recovered 10% revenue leakage by designing a custom Akamai WAF that <strong>prevents Bots and DDos attcks</strong> achieveing over 99.9% service uptime.</li></ul>
+
+# Director of Digital Stratgy
+- company: Software Engineer Intern
+  position: 4DREPLAY(Sanfrancisco, CA)
+  duration:  Jul, 2023 &mdash; Dec, 2023
+  summary: Selected as one of only 10 interns nationwide for a government-sponsored internship program and worked as a Full-Stack Developer Intern <ul class="resume-item-list"><li>Eliminated 40% of data redundancy and improved data consistency by developing a groupware platform that consolidated distributed data sources into a centralized <strong>AWS RDS database</strong>.</li><li>Enhanced data delivery performance by 90% through effective configuration of <strong>AWS CloudFront CDN</strong>.</li></ul>
+
+
+# Communications Coordinator
+- company: Software Engineer Intern
+  position: Tart(Seoul, Korea)
+  duration:   Sep, 2021  &mdash; Feb, 2022
+  summary: Developed the company’s core product as a Full-Stack Developer Intern <ul class="resume-item-list"><li>Engineered a real-time user investment dashboard with <strong>React, TypeScript, and Next.js</strong> achieving a 20% reduction in initial load time and improving user interaction speed.</li><li>Accelerated deployment times by 40% utilizing automated workflows using <strong>Docker and Ansible</strong> to improve release efficiency.</li></ul>
