@@ -27,9 +27,9 @@ const personSchema = {
     <!-- Header -->
     <div class="flex flex-col gap-4">
       <div>
-        <h1 class="text-3xl md:text-4xl font-bold">About</h1>
+        <h1 class="text-3xl md:text-4xl font-bold">About Me</h1>
         <p class="text-sm text-muted-foreground font-mono mt-1">
-          Learn more about this blog
+          Security engineer & builder
         </p>
       </div>
     </div>
@@ -37,13 +37,47 @@ const personSchema = {
     <!-- Main Content -->
     <div class="prose prose-sm dark:prose-invert max-w-none space-y-6">
       <p class="text-muted-foreground leading-relaxed">
-        Welcome to <strong class="text-primary">{SITE.title}</strong>! 
-        This is a placeholder about page. Customize this content to tell your visitors about yourself, your blog, or your interests.
+        I'm <strong class="text-primary">Ella Park</strong>, a security engineer bridging enterprise defense and AI security. Based in San Francisco, I combine an attacker's mindset with reproducible defense strategies to protect organizations and their systems.
       </p>
 
+      <h3>What I Do</h3>
       <p class="text-muted-foreground leading-relaxed">
-        You can edit this page by modifying <code class="text-sm bg-muted px-1.5 py-0.5 rounded">src/pages/about.astro</code>.
+        My focus spans three key areas: defending enterprise infrastructure through WAF detection and incident response, modeling threats across complex deployments, and red-teaming LLM systems to harden them against adversarial attacks. I've defended 50+ clients from crypto exchanges to e-commerce platforms, and consistently deliver measurable outcomes—whether containing threats under ≥99.9% uptime or driving down attack success rates while keeping false positives under 5%.
       </p>
+
+      <h3>Background & Education</h3>
+      <ul class="space-y-2 text-muted-foreground leading-relaxed">
+        <li><strong>MS, Information Security</strong> — Carnegie Mellon University (Aug 2026 – Dec 2027)</li>
+        <li><strong>BEng, Information Security</strong> — Seoul Women's University (Mar 2020 – Feb 2025)</li>
+      </ul>
+
+      <h3>Technical Skills</h3>
+      <ul class="space-y-1 text-sm text-muted-foreground">
+        <li><strong>Cloud & Security:</strong> AWS (IAM, WAF, Lambda, Bedrock), Terraform, Ansible, GitHub Actions</li>
+        <li><strong>Detection & Response:</strong> MITRE ATT&CK, behavioral anomaly detection, incident response</li>
+        <li><strong>AI Security:</strong> Prompt injection & jailbreak testing (garak), guardrail design, OWASP LLM Top 10</li>
+        <li><strong>Languages:</strong> Python, Java, JavaScript/TypeScript, React, Next.js, MySQL, Docker</li>
+      </ul>
+
+      <h3>Notable Projects</h3>
+      <ul class="space-y-3 text-muted-foreground">
+        <li>
+          <strong>ThreatSight</strong> — Detection-as-Code pipeline with CI quality gates, behavioral anomaly detection, and automated threat coverage mapping
+        </li>
+        <li>
+          <strong>CortexWAF</strong> — Multi-agent WAF automation system (Top Prize, AWS × Megazone Hackathon 2026) with closed-loop detection and response
+        </li>
+      </ul>
+
+      <h3>Contact</h3>
+      <p class="text-muted-foreground leading-relaxed">
+        Interested in security, AI, or infrastructure? Feel free to reach out:
+      </p>
+      <ul class="space-y-1 text-sm">
+        <li><strong>Email:</strong> <Link href="mailto:ellapark@andrew.cmu.edu">ellapark@andrew.cmu.edu</Link></li>
+        <li><strong>LinkedIn:</strong> <Link href="https://linkedin.com/in/ellasypark">linkedin.com/in/ellasypark</Link></li>
+        <li><strong>GitHub:</strong> <Link href="https://github.com/ellasypark">github.com/ellasypark</Link></li>
+      </ul>
     </div>
   </section>
 </Layout>
