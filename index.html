@@ -156,7 +156,7 @@
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-    <tr onmouseout="ever_stop()" onmouseover="ever_start()">
+    <tr class="portfolio-item">
       <td style="padding:16px;width:20%;vertical-align:middle">
         <div class="one">
           <div class="two" id='ever_image'>
@@ -179,7 +179,7 @@
 </td>
     </tr>
 
-<tr class="project-row eatsmate-row">
+<tr class="portfolio-item project-row eatsmate-row">
   <td style="padding:16px;width:20%;vertical-align:middle">
     <div class="hover-slideshow" style="position:relative;aspect-ratio:1/1;overflow:hidden;">
       <img src="./images/eatsmate1.jpg" class="slide s1"
@@ -229,7 +229,7 @@
 
 
 
-<tr>
+<tr class="portfolio-item">
   <td style="padding:16px;width:20%;vertical-align:middle">
     <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
       <img src="./images/unifesta.png"
@@ -263,10 +263,10 @@
 </tr>
 
 
-  <tr class="hover-row">
+  <tr class="portfolio-item hover-row">
     <td style="padding:16px;width:20%;vertical-align:middle">
       <div class="one" style="position:relative;">
-        <video id="apec_video" width="100%" muted loop style="display:block;">
+        <video id="apec_video" class="autoplay-video" width="100%" autoplay muted playsinline loop preload="metadata" poster="images/apec-poster.jpg" style="display:block;">
           <source src="images/apec.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
@@ -285,31 +285,12 @@
     </td>
   </tr>
 
-  <script type="text/javascript">
-    const hoverRow = document.querySelector('.hover-row');
-    const videoEl = hoverRow.querySelector('#apec_video');
-    let hasPlayed = false;
 
-    hoverRow.addEventListener('mouseenter', () => {
-      // 행 전체에 hover하면 재생 시작
-      if (!hasPlayed) {
-        videoEl.play();
-        hasPlayed = true; // 한 번만 재생
-      }
-    });
 
-    // hover 전에는 첫 프레임 표시 (재생 X)
-    videoEl.pause();
-  </script>
-          </tbody>
-        
-        
-        
-
-<tr class="hover-row-arduino">
+<tr class="portfolio-item hover-row-arduino">
   <td style="padding:16px;width:20%;vertical-align:middle">
     <div class="one" style="position:relative;">
-      <video id="arduino_video"
+      <video id="arduino_video" class="autoplay-video" autoplay poster="images/arduino-poster.jpg"
              width="100%" muted playsinline loop preload="metadata"
              style="display:block; width:100%; height:auto; object-fit:cover;">
         <source src="./images/aduino1.mp4" type="video/mp4">
@@ -329,33 +310,10 @@
   </td>
 </tr>
 
-<script>
-  // 이 <tr> 바로 뒤에 두세요 (DOM 생성 후 실행)
-  (function(){
-    const row   = document.querySelector('.hover-row-arduino');
-    if (!row) return;
-    const video = row.querySelector('#arduino_video');
-    if (!video) return;
-
-    let started = false;
-
-    // 썸네일 없이 첫 프레임 보이도록 살짝 seek 후 pause
-    video.addEventListener('loadeddata', () => {
-      try { if (video.currentTime === 0) video.currentTime = 0.05; } catch(e){}
-      video.pause();
-    });
-
-    // 행 전체 hover 시 한 번만 재생 시작 → 이후 계속 루프
-    row.addEventListener('mouseenter', () => {
-      if (started) return;
-      video.play().catch(()=>{}); // 브라우저 정책으로 막혀도 에러 무시
-      started = true;
-    }, { passive: true });
-  })();
-</script>
 
 
-<tr class="project-row eatsmate-row">
+
+<tr class="portfolio-item project-row eatsmate-row">
   <td style="padding:16px;width:20%;vertical-align:middle">
     <div class="hover-slideshow" style="position:relative;aspect-ratio:1/1;overflow:hidden;">
       <img src="./images/coding.1.jpg" class="slide s1"
@@ -381,7 +339,7 @@
         
         
         
-</table>
+</tbody></table>
 
             
           </tbody></table>
@@ -397,5 +355,29 @@
         </td>
       </tr>
     </table>
+    <script>
+      document.querySelectorAll('.autoplay-video').forEach((video) => {
+        video.muted = true;
+        const startPlayback = () => {
+          video.play().then(() => {
+            video.controls = false;
+          }).catch(() => {
+            // Keep the poster and a manual play option if autoplay is blocked.
+            video.controls = true;
+          });
+        };
+        if ('IntersectionObserver' in window) {
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) startPlayback();
+              else video.pause();
+            });
+          }, { threshold: 0.1 });
+          observer.observe(video);
+        } else {
+          startPlayback();
+        }
+      });
+    </script>
   </body>
 </html>

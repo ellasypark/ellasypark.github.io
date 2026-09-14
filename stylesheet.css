@@ -217,3 +217,56 @@ td img:not(.slide){
 .hover-slideshow .slide {
   object-fit: cover;
 }
+
+/* Stack portfolio media and descriptions on narrow screens. */
+@media (max-width: 600px) {
+  .portfolio-item {
+    display: block;
+    margin: 16px 0 28px;
+  }
+
+  .portfolio-item > td {
+    display: block;
+    box-sizing: border-box;
+    width: 100% !important;
+    padding: 12px 16px !important;
+  }
+
+  .portfolio-item .one,
+  .portfolio-item .two {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .portfolio-item > td:first-child > div {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .portfolio-item video {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .portfolio-item > td:nth-child(2),
+  .portfolio-item > td:nth-child(2) a,
+  .portfolio-item strong {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .portfolio-item ul {
+    padding-left: 22px;
+  }
+
+  .portfolio-item li + li {
+    margin-top: 10px;
+  }
+
+  .work-card .work-top {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
