@@ -8,113 +8,104 @@
     <meta name="author" content="Ella Park">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20260914-2">
 
   </head>
 
   <body>
     <main class="page">
       <header class="hero">
-        <img class="profile-portrait" src="images/avatar.png.jpg" alt="Ella Park">
+        <img class="profile-portrait" src="images/ella-portrait.jpg" alt="Ella Park">
         <p class="eyebrow">SECURITY ENGINEERING · APPLIED AI</p>
         <h1>Ella Park</h1>
         <p class="hero-role">Security Software Engineer &amp; AI Security Researcher</p>
         <p class="hero-focus">Building AI for defense.<br>Building defenses for AI agents.</p>
-        <nav class="actions" aria-label="Contact and resume">
-          <a class="button primary" href="data/CV_SiyeonPark.pdf">Resume PDF ↗</a>
-          <a class="button" href="https://github.com/ellasypark">GitHub ↗</a>
-          <a class="button" href="mailto:park47878@gmail.com">Email ↗</a>
+        <nav class="contact-links" aria-label="Contact links">
+          <a href="https://github.com/ellasypark">GitHub</a><span aria-hidden="true">/</span>
+          <a href="mailto:ellapark@andrew.cmu.edu">Email</a><span aria-hidden="true">/</span>
+          <a href="https://www.linkedin.com/in/ellasypark/">LinkedIn</a>
         </nav>
         <nav class="section-nav" aria-label="Page sections"><a href="#ai-work">AI work ↓</a><a href="#experience">Experience</a><a href="#projects">Projects</a></nav>
       </header>
       <section id="ai-work" aria-labelledby="ai-heading">
         <div class="section-heading"><p class="eyebrow">SELECTED WORK</p><h2 id="ai-heading">AI security, in practice.</h2></div>
         <div class="featured-grid">
-          <article class="featured cortex">
-            <p class="eyebrow">01 / AI FOR SECURITY</p>
-            <h3>CortexWAF</h3>
-            <p class="lead">A multi-agent AI SOC that turns threat analysis into WAF protection.</p>
-            <div class="metric"><span>~4 hours <span class="arrow">→</span> <strong>15 min</strong></span><p>Detection to enforcement</p></div>
-            <div class="tags"><span>Claude Agent SDK</span><span>AWS Bedrock</span><span>LangChain / RAG</span></div>
-            <p class="meta role-award"><em>Team Leader &amp; Full-Stack Developer · Top Place, AWS × Megazone Cloud Hackathon · 530 participants</em><br>May 2026 – Jun 2026</p>
-            <p class="project-links"><a href="https://github.com/ellasypark/CortexWAF">GitHub ↗</a></p>
-<details><summary>Architecture & implementation</summary><a class="square-project-media" href="images/cortexwaf-architecture.png" target="_blank" rel="noopener" aria-label="Open full CortexWAF architecture image"><img src="images/cortexwaf-architecture.png" alt="CortexWAF expanded AWS architecture" loading="lazy"></a><p class="caption">Tap the diagram to view the full architecture.</p><ul style="margin-top:4px;margin-bottom:4px;">
-          <li>Built a <strong>multi-agent AI SOC</strong> using Claude Agent SDK, AWS Bedrock, and Step Functions to orchestrate threat analysis and WAF, reducing detection-to-enforcement time from approximately 4 hours to 15 minutes.</li>
-          <li>Developed a <strong>LangChain-based RAG</strong> pipeline with <strong>vector search</strong> for WAF rule recommendations, increasing analyst acceptance from 60% to 85% while maintaining a false-positive rate below 1%.</li>
-        </ul></details>
-          </article>
+
           <article class="featured research">
-            <p class="eyebrow">02 / SECURITY FOR AI</p>
+            <p class="eyebrow">SECURITY FOR AI</p>
             <h3>Autonomous agent guardrails</h3>
             <p class="lead">Enforcing safety policies while allowing AI agents to complete permitted tasks.</p>
             <div class="research-flow" aria-label="Research focus: policy, agent actions, evaluation"><span>Policy</span><span aria-hidden="true">→</span><span>Agent actions</span><span aria-hidden="true">→</span><span>Evaluation</span></div>
             <div class="tags"><span>Agent safety</span><span>Sandbox boundaries</span><span>Bash / Incalmo</span></div>
             <p class="meta">Student Researcher | Cylab (<a href="https://www.cylab.cmu.edu/research/cyber-autonomy-initiative/index.html">CyLab Autonomous Initiative</a>)</p>
-<details><summary>Research details</summary><ul>
+<div class="expanded-content"><ul>
           <li>Develop <strong>guardrails for autonomous AI agents</strong> to enforce predefined safety policies, preventing sandbox escapes and unauthorized resource access while allowing permitted tasks.</li>
-          <li>Design <strong>evaluation harnesses</strong> using Bash and Incalmo to assess policy compliance and task completion.</li>
-        </ul></details>
+        </ul></div>
           </article>
         </div>
       </section>
       <section id="experience" aria-labelledby="experience-heading">
         <div class="section-heading"><p class="eyebrow">BACKGROUND</p><h2 id="experience-heading">Work experience</h2></div>
-        <div class="experience-list"><article class="experience"><h3>Student Researcher | Cylab (<a href="https://www.cylab.cmu.edu/research/cyber-autonomy-initiative/index.html">CyLab Autonomous Initiative</a>)</h3><p>Guardrails and evaluations for autonomous AI agents.</p><details><summary>Experience details</summary><ul>
+        <div class="experience-list"><article class="experience"><h3>Student Researcher | Cylab (<a href="https://www.cylab.cmu.edu/research/cyber-autonomy-initiative/index.html">CyLab Autonomous Initiative</a>)</h3><p>Guardrails for autonomous AI agents.</p><div class="expanded-content"><ul>
           <li>Develop <strong>guardrails for autonomous AI agents</strong> to enforce predefined safety policies, preventing sandbox escapes and unauthorized resource access while allowing permitted tasks.</li>
-          <li>Design <strong>evaluation harnesses</strong> using Bash and Incalmo to assess policy compliance and task completion.</li>
-        </ul></details></article><article class="experience"><h3>Security Engineer | Megazone Cloud — Seoul, Korea</h3><p class="meta">Dec 2024 – Present</p><p>Enterprise WAF, CDN architecture, and threat defense.</p><details><summary>Experience details</summary><ul>
+        </ul></div></article><article class="experience"><h3>Security Engineer | Megazone Cloud — Seoul, Korea</h3><p class="meta">Dec 2024 – Present</p><p>AI Security, enterprise WAF, CDN architecture, and threat defense.</p><div class="expanded-content"><ul>
+          <li>Implemented and evaluated <strong>LLM guardrails</strong> using <strong>AWS Bedrock Guardrails</strong>, reducing attack success rates by 75% while maintaining a 1% false-positive rate on benign requests.</li>
+          <li>Conducted <strong>AI red teaming</strong> on enterprise <strong>GenAI applications</strong> tailored to client requirements across 50+ clients, mapping identified vulnerabilities to MITRE ATLAS and recommending mitigations.</li>
           <li>Engineered Akamai CDN and WAF solutions for enterprise clients including Samsung, Coupang, LG, and Hyundai, enhancing CDN performance and fortifying security defense strategies through <strong>network traffic analysis.</strong></li>
           <li>Spearheaded the <strong>end-to-end POC lifecycle</strong> by eliciting client requirements through <strong>consultations</strong> and translating them into hands-on implementation, while providing <strong>technical support</strong> and delivering performance analysis reports or presentations.</li>
           <li>Blocked over 200M malicious requests monthly while recovering 10% revenue leakage by designing a custom Akamai WAF that <strong>prevents Bot and DDoS attacks</strong>, achieving ≥99.9% service uptime.</li>
           <li>Ensured seamless user experiences during the iPhone 17 pre-order event by constructing CDN configurations supporting 250,000 concurrent users and 26.32 Gbps peak traffic with an offload rate above 97%.</li>
-        </ul></details></article><article class="experience"><h3>Software Engineer Intern | 4DREPLAY — San Francisco, CA</h3><p class="meta">Jul 2023 – Dec 2023</p><p>Cloud delivery optimization and backend automation.</p><details><summary>Experience details</summary><ul>
+        </ul></div></article><article class="experience"><h3>Software Engineer Intern | 4DREPLAY — San Francisco, CA</h3><p class="meta">Jul 2023 – Dec 2023</p><p>Cloud delivery optimization and backend automation.</p><div class="expanded-content"><ul>
           <li>Improved data delivery performance by <strong>90%</strong> via optimized <strong>AWS CloudFront</strong> CDN configuration.</li>
           <li>Eliminated <strong>40%</strong> data redundancy by consolidating into a centralized <strong>AWS RDS</strong> database.</li>
           <li>Built an automated pipeline using the <strong>Jira REST API</strong> and <strong>AWS Lambda</strong> to sync Jira data with the central DB.</li>
-        </ul></details></article><article class="experience"><h3>Software Engineer Intern | TartAI — Seoul, Korea</h3><p class="meta">Sep 2021 – Feb 2022</p><p>Full-stack dashboards, APIs, and deployment automation.</p><details><summary>Experience details</summary><ul>
+        </ul></div></article><article class="experience"><h3>Software Engineer Intern | TartAI — Seoul, Korea</h3><p class="meta">Sep 2021 – Feb 2022</p><p>Full-stack dashboards, APIs, and deployment automation.</p><div class="expanded-content"><ul>
           <li>Developed a real-time investment dashboard with <strong>React</strong>, <strong>TypeScript</strong>, and <strong>Next.js</strong>, reducing initial load by <strong>20%</strong> and improving interaction speed.</li>
           <li>Accelerated deployments by <strong>40%</strong> using automated workflows with <strong>Docker</strong> and <strong>Ansible</strong>.</li>
           <li>Created high-performance <strong>Python APIs</strong> to efficiently process <strong>200+</strong> downstream requests.</li>
-        </ul></details></article></div>
+        </ul></div></article></div>
       </section>
       <section id="projects" aria-labelledby="projects-heading">
         <div class="section-heading"><p class="eyebrow">MORE TO EXPLORE</p><h2 id="projects-heading">Selected projects</h2></div>
-        <div class="other-grid"><article class="compact-card"><h3>Deep Model in Malware TLS Classification</h3><p>Deep learning for malware detection in encrypted TLS traffic.</p><details><summary>Project details</summary><div class="project-media"><img src="images/tls.jpg" alt="Deep Model in Malware TLS Classification" loading="lazy"></div><p class="meta"><em>Team Leader &amp; Researcher</em><br>Mar 2023 – Jul 2023</p><ul style="margin-top:4px;margin-bottom:4px;">
+        <div class="other-grid portfolio-list"><article class="compact-card portfolio-row cortex"><div class="portfolio-visual"><a class="square-project-media" href="images/cortexwaf-architecture.png" target="_blank" rel="noopener" aria-label="Open full CortexWAF architecture image"><img src="images/cortexwaf-architecture.png" alt="CortexWAF expanded AWS architecture" loading="lazy"></a></div><div class="portfolio-copy"><h3>CortexWAF</h3><p class="meta role-award"><em>Team Leader &amp; Full-Stack Developer · Top Place, AWS × Megazone Cloud Hackathon · 530 participants</em><br>May 2026 – Jun 2026</p><p class="project-links"><a href="https://github.com/ellasypark/CortexWAF">GitHub ↗</a></p><ul style="margin-top:4px;margin-bottom:4px;">
+          <li>Built a <strong>multi-agent AI SOC</strong> using Claude Agent SDK, AWS Bedrock, and Step Functions to orchestrate threat analysis and WAF, reducing detection-to-enforcement time from approximately 4 hours to 15 minutes.</li>
+          <li>Developed a <strong>LangChain-based RAG</strong> pipeline with <strong>vector search</strong> for WAF rule recommendations, increasing analyst acceptance from 60% to 85% while maintaining a false-positive rate below 1%.</li>
+        </ul></div></article><article class="compact-card portfolio-row"><div class="portfolio-visual"><div class="project-media"><img src="images/tls.jpg" alt="Deep Model in Malware TLS Classification" loading="lazy"></div></div><div class="portfolio-copy"><h3>Deep Model in Malware TLS Classification</h3><p>Deep learning for malware detection in encrypted TLS traffic.</p><div class="expanded-content"><p class="meta"><em>Team Leader &amp; Researcher</em><br>Mar 2023 – Jul 2023</p><ul style="margin-top:4px;margin-bottom:4px;">
     <li>Utilized <strong>ResNet-based CNN</strong> and <strong>FS-Net-based RNN</strong> models with Markov chain fingerprinting to capture sequential TLS message patterns, improving feature extraction and reducing false positives.</li>
     <li>Awarded <strong>2nd place</strong> at the Korea Simulation Academic Conference of the Korea Society for Simulation.</li>
     <li>Initiated research on malware detection within <strong>TLS-encrypted traffic</strong> without decryption, achieving more efficient classification than conventional methods.</li>
-  </ul></details></article><article class="compact-card"><h3>Single Traveler Application “Eats-Mate”</h3><p>A full-stack travel application. 3rd place out of 156 teams.</p><details><summary>Project details</summary><div class="project-media"><img src="./images/eatsmate1.jpg" alt="Single Traveler Application “Eats-Mate”" loading="lazy"></div><div class="photo-strip"><img src="images/eatsmate2.jpg" alt="Eats-Mate application screen" loading="lazy"><img src="images/eatsmate4.jpg" alt="Eats-Mate application screen" loading="lazy"></div><p class="meta"><em>Team Leader &amp; Full-Stack Developer</em><br>Jun 2022 – Oct 2022</p><p class="project-links"><a href="https://github.com/SWIDX/eats-mate-frontend" target="_blank">Frontend code</a> / <a href="https://github.com/SWIDX/Eats-Mate-Backend" target="_blank">Backend code</a></p><ul style="margin-top:4px;margin-bottom:4px;">
+  </ul></div></div></article><article class="compact-card portfolio-row"><div class="portfolio-visual"><div class="project-media"><img src="./images/eatsmate1.jpg" alt="Single Traveler Application “Eats-Mate”" loading="lazy"></div><div class="photo-strip"><img src="images/eatsmate2.jpg" alt="Eats-Mate application screen" loading="lazy"><img src="images/eatsmate4.jpg" alt="Eats-Mate application screen" loading="lazy"></div></div><div class="portfolio-copy"><h3>Single Traveler Application “Eats-Mate”</h3><p>A full-stack travel application. 3rd place out of 156 teams.</p><div class="expanded-content"><p class="meta"><em>Team Leader &amp; Full-Stack Developer</em><br>Jun 2022 – Oct 2022</p><p class="project-links"><a href="https://github.com/SWIDX/eats-mate-frontend" target="_blank">Frontend code</a> / <a href="https://github.com/SWIDX/Eats-Mate-Backend" target="_blank">Backend code</a></p><ul style="margin-top:4px;margin-bottom:4px;">
       <li>Won <strong>3rd place</strong> out of 156 teams at the Tourism Startup Contest organized by the Korea Tourism Public Institution &amp; KAKAO.</li>
       <li>Led development and team coordination, overseeing the project from concept to IR presentation.</li>
       <li>Directed full-stack development: built a <strong>React/Next.js</strong> frontend and <strong>Spring Boot</strong> microservice backend deployed on <strong>AWS (EC2, RDS, S3)</strong>.</li>
-    </ul></details></article><article class="compact-card"><h3>Unversity Festival Application "Unifesta"</h3><p>A unified platform for discovering university events.</p><details><summary>Project details</summary><div class="project-media"><img src="./images/unifesta.png" alt="Unversity Festival Application &quot;Unifesta&quot;" loading="lazy"></div><p class="meta"><em>Full-Stack Developer</em><br>Nov 2021 – Feb 2022</p><ul style="margin-top:4px;margin-bottom:4px;">
+    </ul></div></div></article><article class="compact-card portfolio-row"><div class="portfolio-visual"><div class="project-media"><img src="./images/unifesta.png" alt="Unversity Festival Application &quot;Unifesta&quot;" loading="lazy"></div></div><div class="portfolio-copy"><h3>Unversity Festival Application "Unifesta"</h3><p>A unified platform for discovering university events.</p><div class="expanded-content"><p class="meta"><em>Full-Stack Developer</em><br>Nov 2021 – Feb 2022</p><ul style="margin-top:4px;margin-bottom:4px;">
       <li>Developed a unified event management platform enabling users to discover and join university events in real time.</li>
       <li>Built dynamic user interfaces using <strong>React</strong> and integrated RESTful APIs developed with <strong>Node.js</strong> and <strong>Express</strong>.</li>
       <li>Deployed the full-stack application on <strong>AWS EC2</strong> with <strong>Nginx reverse proxy</strong> for scalability and fault tolerance.</li>
-    </ul></details></article></div>
+    </ul></div></div></article></div>
       </section>
       <section aria-labelledby="beyond-heading">
         <div class="section-heading"><p class="eyebrow">BEYOND ENGINEERING</p><h2 id="beyond-heading">Speaking &amp; community</h2></div>
-        <div class="other-grid"><article class="compact-card"><h3>APEC in San Francisco</h3><p>One of ten government-sponsored Korean intern representatives.</p><details><summary>Read more</summary><div class="project-media"><video id="apec_video" class="autoplay-video" width="100%" autoplay muted playsinline loop preload="metadata" poster="images/apec-poster.jpg" style="display:block;">
+        <div class="other-grid portfolio-list"><article class="compact-card portfolio-row"><div class="portfolio-visual"><div class="project-media"><video id="apec_video" class="autoplay-video" width="100%" autoplay muted playsinline loop preload="metadata" poster="images/apec-poster.jpg" style="display:block;">
           <source src="images/apec.mp4" type="video/mp4">
           Your browser does not support the video tag.
-        </video></div><p class="meta"><em> Korean Intern Representative &amp; Speaker</em><br>Nov 2023</p><ul style="margin-top:4px;margin-bottom:4px;">
+        </video></div></div><div class="portfolio-copy"><h3>APEC in San Francisco</h3><p>One of ten government-sponsored Korean intern representatives.</p><div class="expanded-content"><p class="meta"><em> Korean Intern Representative &amp; Speaker</em><br>Nov 2023</p><ul style="margin-top:4px;margin-bottom:4px;">
 
         <li>Represented Korean interns at the Korean Official Summit during APEC and shared my story as one of only ten government-sponsored students selected nationwide.</li>
-      </ul></details></article><article class="compact-card"><h3>Arduino coding volunteering</h3><p>Designed and taught a hands-on Arduino curriculum.</p><details><summary>Read more</summary><div class="project-media"><video id="arduino_video" class="autoplay-video" autoplay poster="images/arduino-poster.jpg"
+      </ul></div></div></article><article class="compact-card portfolio-row"><div class="portfolio-visual"><div class="project-media"><video id="arduino_video" class="autoplay-video" autoplay poster="images/arduino-poster.jpg"
              width="100%" muted playsinline loop preload="metadata"
              style="display:block; width:100%; height:auto; object-fit:cover;">
         <source src="./images/aduino1.mp4" type="video/mp4">
         Your browser does not support the video tag.
-      </video></div><p class="meta"><em>Team Leader &amp; Instructor</em><br>Jan 2021 – Jun 2021</p><ul style="margin-top:4px;margin-bottom:4px;">
+      </video></div></div><div class="portfolio-copy"><h3>Arduino coding volunteering</h3><p>Designed and taught a hands-on Arduino curriculum.</p><div class="expanded-content"><p class="meta"><em>Team Leader &amp; Instructor</em><br>Jan 2021 – Jun 2021</p><ul style="margin-top:4px;margin-bottom:4px;">
       <li>As team leader, planned and organized the entire curriculum, leading the team and coordinating with students to ensure a collaborative and productive learning environment.</li>
-    </ul></details></article><article class="compact-card"><h3>Python coding volunteering</h3><p>Founded a coding club and taught over 200 elementary students.</p><details><summary>Read more</summary><div class="project-media"><img src="./images/coding.1.jpg" alt="Python coding volunteering" loading="lazy"></div><div class="photo-strip"><img src="images/coding2.jpg" alt="Coding volunteering activity" loading="lazy"><img src="images/coding4.jpg" alt="Coding volunteering activity" loading="lazy"></div><p class="meta"><em>Club Founder &amp; Instructor</em><br>Sep 2020 – Dev 2020</p><ul style="margin-top:4px;margin-bottom:4px;">
+    </ul></div></div></article><article class="compact-card portfolio-row"><div class="portfolio-visual"><div class="project-media"><img src="./images/coding.1.jpg" alt="Python coding volunteering" loading="lazy"></div><div class="photo-strip"><img src="images/coding2.jpg" alt="Coding volunteering activity" loading="lazy"><img src="images/coding4.jpg" alt="Coding volunteering activity" loading="lazy"></div></div><div class="portfolio-copy"><h3>Python coding volunteering</h3><p>Founded a coding club and taught over 200 elementary students.</p><div class="expanded-content"><p class="meta"><em>Club Founder &amp; Instructor</em><br>Sep 2020 – Dev 2020</p><ul style="margin-top:4px;margin-bottom:4px;">
       <li>Founded a coding volunteer organization and taught Python Entry coding to over 200 4-grade elementary school students</li>
-    </ul></details></article></div>
+    </ul></div></div></article></div>
       </section>
       <footer>
         <h2>Let’s connect.</h2>
-        <p><a href="mailto:park47878@gmail.com">Email ↗</a><a href="https://www.linkedin.com/in/ellasypark/">LinkedIn ↗</a><a href="https://dev.to/ellapark/">Blog (EN) ↗</a><a href="https://xean.tistory.com/">Blog (KR) ↗</a></p>
+        <p><a href="mailto:ellapark@andrew.cmu.edu">Email ↗</a><a href="https://www.linkedin.com/in/ellasypark/">LinkedIn ↗</a><a href="https://dev.to/ellapark/">Blog (EN) ↗</a><a href="https://xean.tistory.com/">Blog (KR) ↗</a></p>
         <small>Original site inspired by <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron</a>.</small>
       </footer>
     </main>

@@ -10,3 +10,26 @@ p{margin:0 0 16px}h1,h2,h3{line-height:1.2;margin:0 0 14px;color:var(--text)}h1{
 @media(max-width:700px){.page{padding:0 20px}.hero{padding:28px 0 0;min-height:0}.profile-portrait{position:static;width:128px;margin:0 auto 20px;transform:translateX(-4px)}.hero .eyebrow{font-size:9px;letter-spacing:1.4px;margin-bottom:10px}.hero h1{margin-bottom:10px}.hero-role{font-size:15px;max-width:330px;margin-bottom:12px}.hero-focus{font-size:14px;margin-bottom:0}.actions{gap:8px;margin:20px 0 8px}.button{padding:9px 12px;font-size:13px}.section-nav{gap:24px;font-size:12px}section{margin-top:36px}.section-heading{margin-bottom:18px}.featured-grid,.other-grid{grid-template-columns:1fr}.featured{padding:22px}.featured h3{font-size:25px}.lead{font-size:15px}.metric{margin:18px 0}.metric>span{font-size:32px}.research-flow{font-size:12px;padding:22px 0}.research-flow span:nth-child(odd){padding:9px}.compact-card{padding:20px}.experience h3{font-size:16px}.experience{padding:18px 0}footer{margin-top:40px}.tags{gap:6px}.tags span{font-size:10px}.meta{font-size:12px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 .photo-strip{display:flex;gap:8px;margin-bottom:16px}.photo-strip img{width:calc(50% - 4px);aspect-ratio:1;object-fit:cover;border-radius:6px}
+
+/* Plain contact links and always-visible portfolio rows. */
+.contact-links{display:flex;align-items:center;justify-content:center;gap:14px;margin:22px 0 10px;font-size:15px}
+.contact-links a{display:inline-flex;align-items:center;min-height:44px}
+.contact-links>span{color:var(--muted)}
+.featured-grid{grid-template-columns:1fr}
+.featured.research{max-width:none}
+.expanded-content{margin-top:16px}
+.portfolio-list{display:flex;flex-direction:column;gap:24px}
+.portfolio-row{display:grid;grid-template-columns:200px minmax(0,1fr);align-items:center;gap:28px;padding:24px}
+.portfolio-visual,.portfolio-copy{min-width:0}
+.portfolio-copy>p:not(.meta):not(.project-links){color:var(--muted);font-size:14px}
+.portfolio-copy .expanded-content{margin-top:10px}
+.portfolio-copy h3{font-size:21px}
+.portfolio-row .project-media{margin-bottom:0}
+.portfolio-row .photo-strip{margin-top:8px;margin-bottom:0}
+.portfolio-row .meta{font-size:13px}
+@media(max-width:700px){
+ .contact-links{gap:12px;margin:16px 0 8px;font-size:14px}
+ .portfolio-row{grid-template-columns:1fr;gap:20px;padding:20px}
+ .portfolio-visual{width:100%;max-width:320px;margin:0 auto}
+ .portfolio-copy h3{font-size:20px}
+}
