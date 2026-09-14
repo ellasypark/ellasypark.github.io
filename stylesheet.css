@@ -207,13 +207,24 @@ tr td[style*="width:80%"] {
 
 /* 이미지 비율 유지 */
 .project-row img:not(.slide),
-td img:not(.slide){
+td img:not(.slide):not(.profile-portrait){
   width: 100%;
   height: auto !important;
   object-fit: contain !important;
 }
 
 /* 슬라이드 이미지는 커버 유지 */
+.profile-portrait {
+  display: block;
+  width: 180px;
+  max-width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 14px;
+  margin: 0 auto;
+}
+
 .hover-slideshow .slide {
   object-fit: cover;
 }
