@@ -239,3 +239,27 @@ p{margin:0 0 16px}h1,h2,h3{line-height:1.2;margin:0 0 14px;color:var(--text)}h1{
   .experience-date, .experience-location { font-size: 11px; }
   .experience-heading .entry-description { font-size: 13px; }
 }
+
+/* Keep the portrait beside the complete introduction at every width. */
+.profile-header {
+  grid-template-columns: 160px minmax(0, 1fr);
+  grid-template-rows: auto auto auto auto;
+  align-items: center;
+  column-gap: 32px;
+}
+.profile-photo { grid-column: 1; grid-row: 1 / 5; align-self: center; }
+.profile-header h1 { grid-column: 2; grid-row: 1; }
+.profile-role { grid-column: 2; grid-row: 2; }
+.profile-tagline { grid-column: 2; grid-row: 3; }
+.profile-links { grid-column: 2; grid-row: 4; margin-top: 0; }
+@media (max-width: 700px) {
+  .profile-header { grid-template-columns: 90px minmax(0, 1fr); column-gap: 18px; }
+  .profile-header h1 { font-size: 28px; margin-bottom: 6px; }
+  .profile-role { margin-top: 0; font-size: 13px; }
+  .profile-tagline { margin-top: 6px; font-size: 11px; white-space: normal; }
+  .profile-links { gap: 8px; font-size: 12px; }
+}
+@media (max-width: 360px) {
+  .profile-header { grid-template-columns: 76px minmax(0, 1fr); column-gap: 14px; }
+  .profile-photo { width: 76px; height: 76px; }
+}
