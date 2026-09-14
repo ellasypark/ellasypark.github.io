@@ -33,3 +33,39 @@ p{margin:0 0 16px}h1,h2,h3{line-height:1.2;margin:0 0 14px;color:var(--text)}h1{
  .portfolio-visual{width:100%;max-width:320px;margin:0 auto}
  .portfolio-copy h3{font-size:20px}
 }
+
+/* Compact introduction aligned with the portrait. */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 210px;gap:24px;align-items:center;padding:28px 8px 0 0;min-height:0}
+.hero-copy{grid-column:1;grid-row:1;min-width:0}
+.hero .profile-portrait{position:static;grid-column:2;grid-row:1;width:210px;margin:0;transform:none}
+.hero h1{font-size:34px;letter-spacing:-.8px;margin:0 0 8px}
+.hero .eyebrow{margin-bottom:6px}
+.hero-role{font-size:15px;margin:0 auto 8px;line-height:1.45}
+.hero-focus{font-size:14px;margin:0;line-height:1.4}
+.hero .contact-links{margin:6px 0 0}
+.hero .section-nav{gap:20px}
+.hero+section{margin-top:32px}
+
+/* Restore the original three-photo hover effect in one square. */
+.hover-slideshow{position:relative;isolation:isolate}
+.hover-slideshow .slide{position:absolute;inset:0;object-fit:cover;opacity:0}
+.hover-slideshow .slide:first-child{opacity:1}
+.portfolio-row:hover .hover-slideshow .slide,
+.hover-slideshow:focus .slide{animation:portfolio-slides 6s infinite}
+.portfolio-row .hover-slideshow .slide:nth-child(2){animation-delay:-4s}
+.portfolio-row .hover-slideshow .slide:nth-child(3){animation-delay:-2s}
+@keyframes portfolio-slides{0%,28%{opacity:1}33.333%,95%{opacity:0}100%{opacity:1}}
+.hover-slideshow:focus-visible{outline:2px solid var(--green);outline-offset:4px}
+@media(max-width:700px){
+ .hero{grid-template-columns:minmax(0,1fr) 110px;gap:14px;padding:20px 0 0}
+ .hero .profile-portrait{width:110px}
+ .hero h1{font-size:28px;margin-bottom:6px}
+ .hero .eyebrow{font-size:8px;letter-spacing:.8px;margin-bottom:5px}
+ .hero-role{font-size:13px;margin-bottom:6px}
+ .hero-focus{font-size:12px}
+ .hero .contact-links{gap:8px;font-size:12px;margin:4px 0 0}
+ .hero .section-nav{font-size:11px;gap:16px}
+}
+@media(max-width:360px){.hero{grid-template-columns:minmax(0,1fr) 88px;gap:10px}.hero .profile-portrait{width:88px}.hero h1{font-size:26px}.hero .contact-links{gap:6px}}
+@media(hover:none){.hover-slideshow .slide{animation:portfolio-slides 6s infinite}}
+@media(prefers-reduced-motion:reduce){.portfolio-row .hover-slideshow .slide{animation:none}.hover-slideshow .slide:first-child{opacity:1}}
