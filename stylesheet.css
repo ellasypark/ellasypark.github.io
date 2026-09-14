@@ -216,13 +216,14 @@ td img:not(.slide):not(.profile-portrait){
 /* 슬라이드 이미지는 커버 유지 */
 .profile-portrait {
   display: block;
-  width: 180px;
+  width: 210px;
   max-width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  object-position: center top;
+  object-position: center;
   border-radius: 50%;
   margin: 0 auto;
+  transform: translate(-8px, 6px);
 }
 
 .hover-slideshow .slide {
