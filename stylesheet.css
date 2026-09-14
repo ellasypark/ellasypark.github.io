@@ -230,6 +230,16 @@ td img:not(.slide):not(.profile-portrait){
   object-fit: cover;
 }
 
+.square-project-media {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #fff;
+}
+
 /* Stack portfolio media and descriptions on narrow screens. */
 @media (max-width: 600px) {
   .portfolio-item {
