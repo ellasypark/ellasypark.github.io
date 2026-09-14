@@ -213,3 +213,29 @@ p{margin:0 0 16px}h1,h2,h3{line-height:1.2;margin:0 0 14px;color:var(--text)}h1{
   .entry-role-date { flex-wrap: wrap; }
   .entry-date { margin-left: auto; }
 }
+
+/* Two aligned resume lines: role/date, then description/location. */
+.experience-heading {
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 6px 24px;
+  align-items: baseline;
+}
+.experience-heading h3 { grid-column: 1; grid-row: 1; }
+.experience-date { grid-column: 2; grid-row: 1; }
+.experience-heading .entry-description {
+  grid-column: 1;
+  grid-row: 2;
+  margin: 0;
+  font-size: 14px;
+}
+.experience-location { grid-column: 2; grid-row: 2; }
+.experience-date, .experience-location {
+  color: var(--muted);
+  font-size: 12px;
+  text-align: right;
+}
+@media (max-width: 700px) {
+  .experience-heading { grid-template-columns: minmax(0, 1fr) minmax(95px, 35%); column-gap: 12px; }
+  .experience-date, .experience-location { font-size: 11px; }
+  .experience-heading .entry-description { font-size: 13px; }
+}
