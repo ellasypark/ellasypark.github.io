@@ -175,3 +175,41 @@ p{margin:0 0 16px}h1,h2,h3{line-height:1.2;margin:0 0 14px;color:var(--text)}h1{
 @media (max-width: 700px) {
   .profile-tagline { font-size: clamp(9px, 2.7vw, 12px); }
 }
+
+/* Resume-style metadata and secondary descriptions. */
+.experience .entry-description,
+.portfolio-copy .entry-description {
+  color: #8b96a5;
+  font-style: italic;
+  font-weight: 400;
+}
+.experience-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  column-gap: 24px;
+  margin-bottom: 6px;
+}
+.experience-heading h3 { margin-bottom: 0; }
+.entry-meta {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.entry-role-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px 20px;
+}
+.entry-role-date em { min-width: 0; }
+.entry-date { flex-shrink: 0; text-align: right; }
+@media (max-width: 700px) {
+  .experience-heading { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .entry-meta { justify-self: end; font-size: 11px; }
+  .entry-role-date { flex-wrap: wrap; }
+  .entry-date { margin-left: auto; }
+}
