@@ -240,6 +240,10 @@ td img:not(.slide):not(.profile-portrait){
   background: #fff;
 }
 
+.square-project-media img {
+  transform: scale(1.2);
+}
+
 /* Stack portfolio media and descriptions on narrow screens. */
 @media (max-width: 600px) {
   .portfolio-item {
