@@ -367,3 +367,35 @@ footer .footer-tagline {
   .profile-title-row { gap: 10px; }
   .profile-header .profile-title-row .profile-tagline { font-size: 10px; }
 }
+
+/* Slogan sits independently at the right-center of the introduction. */
+.profile-header {
+  grid-template-columns: 160px minmax(0, 1fr) minmax(150px, 240px);
+  column-gap: 24px;
+}
+.profile-header > .profile-tagline {
+  grid-column: 3;
+  grid-row: 1 / 5;
+  align-self: center;
+  margin: 0;
+  text-align: right;
+  color: #7f8997;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.5;
+  white-space: normal;
+}
+@media (max-width: 700px) {
+  .profile-header { grid-template-columns: 90px minmax(0, 1fr); column-gap: 18px; }
+  .profile-header > .profile-tagline {
+    grid-column: 2;
+    grid-row: 5;
+    justify-self: end;
+    font-size: 11px;
+    margin-top: 4px;
+  }
+  .profile-photo { grid-row: 1 / 6; }
+}
+@media (max-width: 360px) {
+  .profile-header { grid-template-columns: 76px minmax(0, 1fr); column-gap: 14px; }
+}
