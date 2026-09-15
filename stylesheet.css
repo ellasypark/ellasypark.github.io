@@ -407,7 +407,7 @@ footer .footer-tagline {
 .profile-header > .profile-tagline {
   white-space: nowrap;
   font-size: 13px;
-  color: #a2cbb7;
+  color: var(--green);
 }
 @media (max-width: 900px) {
   .profile-header { grid-template-columns: 160px minmax(0, 1fr); }
