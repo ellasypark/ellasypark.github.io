@@ -328,3 +328,19 @@ footer .footer-tagline {
   line-height: 1.5;
   color: var(--muted);
 }
+
+/* Keep the slogan in the profile beneath the two information lines. */
+.profile-header { grid-template-rows: repeat(5, auto); }
+.profile-photo { grid-row: 1 / 6; }
+.profile-header .profile-tagline {
+  grid-column: 2;
+  grid-row: 4;
+  font-size: 12px;
+  color: #8b96a5;
+  line-height: 1.5;
+  margin: 6px 0 0;
+}
+.profile-header .profile-links { grid-row: 5; }
+@media (max-width: 700px) {
+  .profile-header .profile-tagline { font-size: 11px; white-space: normal; }
+}
