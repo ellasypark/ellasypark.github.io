@@ -284,3 +284,25 @@ p{margin:0 0 16px}h1,h2,h3{line-height:1.2;margin:0 0 14px;color:var(--text)}h1{
 @media (max-width: 700px) {
   .profile-education { font-size: 12px; }
 }
+
+/* Align dates with project titles and tighten supporting text. */
+.project-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 8px 20px;
+  margin-bottom: 6px;
+}
+.project-heading h3 { margin: 0; line-height: 1.3; }
+.project-heading .entry-date { color: var(--muted); font-size: 12px; }
+.portfolio-copy .entry-description { margin: 0; line-height: 1.4; }
+.portfolio-copy > .entry-description + .expanded-content { margin-top: 2px; }
+.portfolio-copy .entry-role-date { display: block; margin: 0 0 6px; line-height: 1.4; }
+.portfolio-copy > .entry-role-date { margin-top: 2px; }
+.portfolio-copy .project-links { margin-bottom: 6px; }
+.portfolio-copy ul { line-height: 1.6; }
+.portfolio-copy li + li { margin-top: 8px; }
+@media (max-width: 700px) {
+  .project-heading { grid-template-columns: minmax(0, 1fr) auto; column-gap: 12px; }
+  .project-heading .entry-date { font-size: 10px; }
+}
