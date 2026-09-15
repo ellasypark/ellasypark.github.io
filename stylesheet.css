@@ -399,3 +399,31 @@ footer .footer-tagline {
 @media (max-width: 360px) {
   .profile-header { grid-template-columns: 76px minmax(0, 1fr); column-gap: 14px; }
 }
+
+/* Keep the italic slogan on one line with a soft green accent. */
+.profile-header {
+  grid-template-columns: 160px minmax(0, 1fr) max-content;
+}
+.profile-header > .profile-tagline {
+  white-space: nowrap;
+  font-size: 13px;
+  color: #a2cbb7;
+}
+@media (max-width: 900px) {
+  .profile-header { grid-template-columns: 160px minmax(0, 1fr); }
+  .profile-header > .profile-tagline {
+    grid-column: 1 / -1;
+    grid-row: 5;
+    justify-self: end;
+    margin-top: 8px;
+    font-size: 13px;
+  }
+  .profile-photo { grid-row: 1 / 5; }
+}
+@media (max-width: 700px) {
+  .profile-header { grid-template-columns: 90px minmax(0, 1fr); }
+  .profile-header > .profile-tagline { font-size: clamp(10px, 2.9vw, 13px); }
+}
+@media (max-width: 360px) {
+  .profile-header { grid-template-columns: 76px minmax(0, 1fr); }
+}
