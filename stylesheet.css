@@ -427,3 +427,25 @@ footer .footer-tagline {
 @media (max-width: 360px) {
   .profile-header { grid-template-columns: 76px minmax(0, 1fr); }
 }
+
+/* Two-image CortexWAF loop, with the same square frame as other projects. */
+.cortex-slideshow { background: #fff; }
+.portfolio-row .cortex-slideshow .slide {
+  animation: cortex-slides 6s infinite;
+}
+.portfolio-row .cortex-slideshow .slide:nth-child(2) {
+  animation-delay: -3s;
+}
+.cortex-slideshow .architecture-slide {
+  object-fit: contain;
+  background: #fff;
+  transform: scale(1.2);
+}
+@keyframes cortex-slides {
+  0%, 45% { opacity: 1; }
+  50%, 95% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-row .cortex-slideshow .slide { animation: none; }
+}
